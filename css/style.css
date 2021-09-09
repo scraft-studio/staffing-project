@@ -7,6 +7,7 @@ File: main stylesheet
 01.General
 02.helper
 03.components
+
 04.menu
 05.default
 06.home
@@ -947,8 +948,8 @@ p {
 }
 
 .social-icon.social li a {
-  color: #adb5bd;
-  border-color: #adb5bd;
+  color: #fff;
+  border-color: #fff;
 }
 
 .back-to-top {
@@ -1312,13 +1313,18 @@ p {
 }
 
 @media (min-width: 992px) {
+  .homePage .navigation-menu{
+    -webkit-box-pack: end!important;
+    -ms-flex-pack: end!important;
+    justify-content: end!important;
+  }
   #topnav .navigation-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #topnav .navigation-menu > .has-submenu > .submenu > .has-submenu > .submenu::before {
     top: 20px;
@@ -1616,6 +1622,8 @@ p {
   display: table;
   width: 100%;
   height: 100%;
+  z-index: 2;
+position: sticky;
 }
 
 .home-desc-center {
@@ -2602,8 +2610,11 @@ hr {
 /* custom css add area start */
 
 
-#topnav {
-  background-color: #000;
+.homePage {
+  background-color: #000!important;
+}
+#topnav.scroll{
+  background: #ffffff!important;
 }
 .paraCoderdesc {
   max-width: 875px;
@@ -2620,4 +2631,81 @@ hr {
 }
 .service-icon-asdf i {
   font-size: 75px;
+}
+
+.social-icon-box {
+  padding: 0;
+  list-style: none;
+}
+.social-icon-box li a {
+  font-size: 18px;
+  color: #fff;
+}
+.social-icon-box li {
+  margin-bottom: 10px;
+}
+
+.logo-dark {
+  max-width: 150px;
+  height: auto;
+}
+
+.logo-light {
+  max-width: 150px;
+  height: auto;
+}
+.bannerhded {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 45px;
+  letter-spacing: 0.2em;
+  color: #FFFFFF;
+  margin-bottom: 60px;
+}
+.bg-home {
+  padding: 150px 0;
+}
+.banner-content h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 35px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+}
+.banner-content p{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #919191;
+  max-width: 365px;
+  margin: auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.banner-content a {
+  background-color: #fff!important;
+}
+.banner-content a.btn.btn-primary-outline:hover{
+  /* color: #000!important; */
+  background-color: #4466d8!important;
+}
+
+.homePage .navigation-menu{
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+}
+
+#coderAboutsection h4 {
+  color: #fff;
+}
+#coderAboutsection p {
+  color: #fff !important;
+}
+#coderAboutsection {
+  padding: 150px 0;
 }
